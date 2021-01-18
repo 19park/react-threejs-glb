@@ -8,7 +8,7 @@ import Floor from "./components/Three/floor";
 //Styles
 import "./assets/styles/App.scss";
 //Model
-import Model from "./components/Three/board";
+import Model from "./components/Three/donut";
 
 // Initiate softShadows
 softShadows();
@@ -18,11 +18,11 @@ const ZoomWithOrbital = () => {
   const { gl, camera } = useThree();
   useSpring({
     from: {
-      z: 30,
+      z: 2,
     },
-    x: -5,
-    y: 4,
-    z: 120,
+    x: -1,
+    y: 1,
+    z: 0,
     // React Springs onFrame
     onFrame: ({ x, y, z }) => {
       camera.position.x = x;
@@ -49,7 +49,7 @@ const App = () => {
       <Canvas
         colorManagement
         shadowMap
-        camera={{ position: [-5, 4, 120], fov: 80 }}>
+        camera={{ position: [-1, 0, 0], fov: 10 }}>
         <Lights />
         <Suspense fallback={null}>
           <Model />
