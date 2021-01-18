@@ -1,8 +1,8 @@
-import React, { Suspense, useState } from "react";
+import React, {Suspense} from "react";
 //Three
-import { Canvas, useThree } from "react-three-fiber";
-import { Loader, OrbitControls, softShadows } from "@react-three/drei";
-import { useSpring } from "react-spring";
+import {Canvas, useThree} from "react-three-fiber";
+import {Loader, OrbitControls, softShadows} from "@react-three/drei";
+import {useSpring} from "react-spring";
 import Lights from "./components/Three/lights";
 import Floor from "./components/Three/floor";
 //Styles
@@ -43,7 +43,6 @@ const ZoomWithOrbital = () => {
 
 const App = () => {
   // State if chest is open
-  const [open, setOpen] = useState(false);
   return (
     <>
       <Canvas
